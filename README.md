@@ -1,5 +1,5 @@
-# PlaylistManagerApp
-# Playlist Manager Android App
+# MusicPlaylistManagerAndroidApp
+# Playlist Manager App
 
 This is a simple Android application created for a simple practicum. It allows users to manage a playlist of songs, including adding new songs, viewing the list, and calculating the average rating of the songs.
 
