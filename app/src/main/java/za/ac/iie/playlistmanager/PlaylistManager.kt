@@ -2,10 +2,9 @@ package za.ac.iie.playlistmanager
 
 import android.util.Log
 
-/**
- * A singleton object to manage the playlist data.
- * This allows a single, consistent source of data across different activities.
- */
+
+// A singleton object to manage the playlist data.
+
 object PlaylistManager {
 
     // Log tag for debugging
@@ -18,25 +17,15 @@ object PlaylistManager {
     val ratings = ArrayList<Int>()
     val comments = ArrayList<String>()
 
-    /**
-     * Initializes the playlist with some example data as per the assignment.
-     */
+    // initialize data
     init {
-        // Pre-populating the playlist with the example data
-        addSong("Song A", "Artist A", 4, "Rap")
-        addSong("Song B", "Artist B", 1, "Dance song")
-        addSong("Song C", "Artist C", 2, "Best Love song")
-        addSong("Song D", "Artist D", 3, "Memories")
+        // Pre-populating the playlist with example data
+        addSong("Creation", "James Mc", 4, "Rap")
+        addSong("Peace", "Jin K", 3, "Dance song")
+        addSong("Lovers and love", "Artist C", 5, "Best Love song")
+        addSong("Dangerous", "Monkey D", 2, "Memories")
     }
 
-    /**
-     * Adds a new song to the playlist.
-     * All details are added to their respective ArrayLists.
-     * @param title The title of the song.
-     * @param artist The name of the artist.
-     * @param rating The song's rating (1-5).
-     * @param comment Any comments about the song.
-     */
     fun addSong(title: String, artist: String, rating: Int, comment: String) {
         songTitles.add(title)
         artistNames.add(artist)

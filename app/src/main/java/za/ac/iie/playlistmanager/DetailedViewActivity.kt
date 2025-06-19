@@ -48,10 +48,7 @@ class DetailedViewActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * Iterates through the playlist data and displays it in the TextView.
-     * Uses a loop as required by the assignment.
-     */
+
     private fun displayPlaylist() {
         // Using a StringBuilder for efficient string concatenation in a loop
         val playlistBuilder = StringBuilder()
@@ -81,10 +78,6 @@ class DetailedViewActivity : AppCompatActivity() {
         Log.d(TAG, "displayPlaylist: Successfully displayed ${PlaylistManager.songTitles.size} songs.")
     }
 
-    /**
-     * Calculates the average rating of all songs in the playlist and displays it.
-     * Uses a loop as required by the assignment.
-     */
     private fun calculateAndDisplayAverage() {
         val ratings = PlaylistManager.ratings
 

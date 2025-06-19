@@ -1,7 +1,7 @@
 package za.ac.iie.playlistmanager
 
-// STUDENT NUMBER: 12345678
-// FULL NAME: John Doe
+// Student Number: ST10492515
+// Full Name: Jean Nolobe Mwana
 
 
 
@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    // Log tag for debugging this activity
+    // Log tag to debugging this activity
     private val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,9 +54,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * Displays an AlertDialog to get song details from the user.
-     */
+
+      //Displays an AlertDialog to get song details from the user.
+
     private fun showAddSongDialog() {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_add_song, null)
         val etSongTitle = dialogView.findViewById<EditText>(R.id.etSongTitle)
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
             val ratingStr = etRating.text.toString().trim()
             val comments = etComments.text.toString().trim()
 
-            // --- Error Handling ---
+            // This is Error Handling
             if (title.isEmpty() || artist.isEmpty() || ratingStr.isEmpty()) {
                 // Constructive feedback if fields are empty
                 Log.w(TAG, "Validation failed: Some fields are empty.")
@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener // Keep the dialog open
             }
 
-            // --- If validation passes ---
+            // If validation passes
             Log.d(TAG, "Validation successful. Adding song.")
             PlaylistManager.addSong(title, artist, rating, comments)
             Toast.makeText(this, "Song added successfully!", Toast.LENGTH_SHORT).show()
